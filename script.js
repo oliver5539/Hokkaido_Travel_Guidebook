@@ -38,6 +38,9 @@ function initFlipbook() {
 
         // 更新頁碼
         pageIndicator.textContent = `${currentPage + 1} / ${totalPages}`;
+
+        // 滾動到頁面頂部
+        window.scrollTo(0, 0);
     }
 
     // 上一頁
