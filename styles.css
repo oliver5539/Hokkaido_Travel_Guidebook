@@ -477,6 +477,48 @@ div.photo {
     border: 2px dashed #CBD5E1;
 }
 
+/* === 夜間資訊區塊 === */
+.night-info {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.night-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #F8FAFC;
+}
+
+.night-spots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.night-spots .spot {
+    flex: 1;
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.night-spots .spot strong {
+    display: block;
+    color: #4ECDC4;
+    margin-bottom: 3px;
+}
+
+.night-spots .spot p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+}
+
 /* === 卡片區 (交通頁) === */
 .card-grid {
     display: grid;
