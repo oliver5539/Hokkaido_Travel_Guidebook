@@ -3,16 +3,18 @@
    =================================== */
 
 :root {
-    --primary: #9B7EDE;
-    --primary-dark: #7C5FBF;
-    --secondary: #60A5FA;
-    --accent: #F87171;
+    --primary: #3B82F6;
+    --primary-dark: #1E40AF;
+    --secondary: #4ECDC4;
+    --accent: #A78BFA;
     --snow: #F8FAFC;
-    --ice: #E0F2FE;
+    --ice: #E0F4FF;
     --text: #1E293B;
     --text-light: #64748B;
     --page-bg: #FFFEF9;
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    --hokkaido-blue: #0EA5E9;
+    --hokkaido-lavender: #A78BFA;
 }
 
 * {
@@ -23,7 +25,7 @@
 
 body {
     font-family: 'Noto Sans TC', -apple-system, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #9B7EDE 100%);
+    background: linear-gradient(135deg, #E0F4FF 0%, #B3E5FC 30%, #81D4FA 60%, #4FC3F7 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -211,12 +213,34 @@ body {
 
 /* === 封面 === */
 .cover-page .page-inner {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, #E0F4FF 0%, #B3E5FC 40%, #81D4FA 70%, #0EA5E9 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #1E40AF;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-page .page-inner::before {
+    content: '❄ ❅ ❆ ❄ ❅ ❆ ❄ ❅';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    letter-spacing: 1rem;
+}
+
+.cover-page .page-inner::after {
+    content: '🏔️';
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 3rem;
+    opacity: 0.2;
 }
 
 .cover-content {
@@ -607,20 +631,35 @@ body {
 }
 
 .btn-download {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--hokkaido-blue) 100%);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: none;
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .btn-download:hover {
-    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* === 頁面底部 === */
+.page-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed var(--ice);
+    text-align: center;
+}
+
+.footer-text {
     color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 /* === 翻頁提示 === */
@@ -669,8 +708,18 @@ body {
         overflow: visible;
     }
 
+    /* 封面頁填滿 */
+    .cover-page .page-inner {
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
     .nav-arrows {
         padding: 15px 0;
+        background: rgba(255, 255, 255, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
     .title-main {
