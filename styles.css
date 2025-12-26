@@ -27,10 +27,13 @@ body {
     font-family: 'Noto Sans TC', -apple-system, sans-serif;
     background: linear-gradient(135deg, #E0F4FF 0%, #B3E5FC 30%, #81D4FA 60%, #4FC3F7 100%);
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
     margin: 0;
     overflow: hidden;
 }
