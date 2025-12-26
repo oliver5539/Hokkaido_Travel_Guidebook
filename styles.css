@@ -643,11 +643,34 @@ body {
 /* === 響應式 === */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 0;
+        overflow: auto;
+        align-items: flex-start;
+    }
+
+    .book-container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .book {
+        aspect-ratio: auto;
+        max-height: none;
+        min-height: auto;
+    }
+
+    .page {
+        height: auto;
     }
 
     .page-inner {
         padding: 15px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .nav-arrows {
+        padding: 15px 0;
     }
 
     .title-main {
