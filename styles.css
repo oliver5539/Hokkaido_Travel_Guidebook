@@ -589,6 +589,47 @@ div.photo {
     font-weight: 500;
 }
 
+/* === 交通方案區塊 === */
+.transport-detail {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #E0F4FF 0%, #B3E5FC 100%);
+    border-radius: 10px;
+}
+
+.transport-detail h3 {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.transport-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.transport-options .option {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.transport-options .option strong {
+    display: block;
+    color: var(--hokkaido-blue);
+    margin-bottom: 5px;
+}
+
+.transport-options .option p {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.4;
+}
+
 /* === 清單區 (準備頁) === */
 .checklist-grid {
     display: grid;
