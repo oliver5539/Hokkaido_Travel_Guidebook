@@ -455,16 +455,26 @@ body {
 }
 
 .photo {
-    width: 250px;
-    height: 180px;
-    background: linear-gradient(135deg, #E0F2FE 0%, #F0E6FF 100%);
-    border: 2px dashed #CBD5E1;
-    border-radius: 10px;
+    width: 180px;
+    height: 120px;
+    background: linear-gradient(135deg, #E0F4FF 0%, #B3E5FC 100%);
+    border: none;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+img.photo {
+    object-fit: cover;
+}
+
+div.photo {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
     color: var(--text-light);
+    border: 2px dashed #CBD5E1;
 }
 
 /* === 卡片區 (交通頁) === */
