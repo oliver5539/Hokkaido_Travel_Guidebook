@@ -630,6 +630,53 @@ div.photo {
     line-height: 1.4;
 }
 
+/* === 交通方案盒子 (Day3) === */
+.transport-box {
+    margin: 15px 0;
+    padding: 12px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #4CAF50;
+}
+
+.transport-box h4 {
+    font-size: 0.9rem;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.transport-route {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.route-option {
+    flex: 1;
+    min-width: 180px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.route-title {
+    font-weight: 600;
+    color: var(--hokkaido-blue);
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.route-steps {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.7rem;
+    line-height: 1.6;
+}
+
+.route-steps li {
+    margin-bottom: 3px;
+}
+
 /* === 清單區 (準備頁) === */
 .checklist-grid {
     display: grid;
