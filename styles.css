@@ -329,6 +329,12 @@ body {
     color: var(--primary-dark);
 }
 
+.hotel-address {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
 .info-tag.night {
     background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
     color: white;
