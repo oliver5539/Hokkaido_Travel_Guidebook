@@ -786,6 +786,51 @@ div.photo {
     box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
 }
 
+/* === 地圖頁專用 === */
+.map-page .page-inner {
+    background: linear-gradient(180deg, #E0F4FF 0%, #F0F9FF 100%);
+}
+
+.map-spots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.map-spot {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.spot-num {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--hokkaido-blue) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.spot-name {
+    font-size: 0.85rem;
+    color: var(--text);
+}
+
+.map-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* === 末頁 === */
 .end-page .page-inner {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
