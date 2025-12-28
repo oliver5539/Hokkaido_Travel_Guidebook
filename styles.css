@@ -327,6 +327,30 @@ body {
     font-weight: 700;
 }
 
+/* 路線按鈕 */
+.map-link-row {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.map-link-btn-small {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.map-link-btn-small:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
 .day-title h2 {
     font-size: 1.3rem;
     color: var(--primary-dark);
