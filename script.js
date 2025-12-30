@@ -72,11 +72,12 @@ function initFlipbook() {
 
     // 點擊書頁左右邊緣翻頁
     document.getElementById('book').addEventListener('click', (e) => {
-        // 避免點擊 checkbox、label、button 時觸發翻頁
+        // 避免點擊 checkbox、label、button、連結時觸發翻頁
         if (e.target.closest('.checklist-box') ||
             e.target.closest('button') ||
             e.target.closest('label') ||
-            e.target.closest('input')) {
+            e.target.closest('input') ||
+            e.target.closest('a')) {
             return;
         }
 
