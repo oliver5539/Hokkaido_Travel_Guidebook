@@ -351,6 +351,63 @@ body {
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
 
+/* 景點連結按鈕 */
+.spot-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.spot-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.spot-link-btn.official {
+    background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+    color: white;
+}
+
+.spot-link-btn.map {
+    background: linear-gradient(135deg, #FF5722 0%, #D84315 100%);
+    color: white;
+}
+
+.spot-link-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* 全行程按鈕 */
+.full-route-btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #9C27B0 0%, #6A1B9A 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 15px auto;
+    max-width: 280px;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+    transition: all 0.3s ease;
+}
+
+.full-route-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+}
+
 .day-title h2 {
     font-size: 1.3rem;
     color: var(--primary-dark);
