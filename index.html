@@ -30,715 +30,724 @@
         <!-- 翻頁導航 -->
         <div class="nav-arrows">
             <button class="nav-btn prev-btn" id="prevBtn" disabled>‹</button>
-            <span class="page-indicator" id="pageIndicator">1 / 8</span>
+            <span class="page-indicator" id="pageIndicator">封面</span>
             <button class="nav-btn next-btn" id="nextBtn">›</button>
         </div>
 
         <!-- 書本區域 -->
         <div class="book" id="book">
-            <!-- 封面 -->
-            <div class="page cover-page active" data-page="0">
-                <div class="page-inner">
-                    <div class="cover-content">
-                        <div class="cover-badge">2026</div>
-                        <h1 class="cover-title">
-                            <span class="title-jp">北海道</span>
-                            <span class="title-main">冬日之旅</span>
-                        </h1>
-                        <p class="cover-date">01.16 - 01.20</p>
-                        <p class="cover-subtitle">函館・登別・札幌・小樽</p>
-                        <div class="cover-decoration">❄ 5天4夜 ❄</div>
-                        <a href="https://www.google.com/maps/dir/函館機場/函館山/登別マリンパークニクス/札幌/小樽運河/五稜郭タワー/函館空港"
-                            target="_blank" class="full-route-btn">🗺️ 查看完整 5 日路線</a>
+            <!-- 書脊 -->
+            <div class="book-spine"></div>
+
+            <!-- ========== Spread 0: 封面（書闔著，只看到右邊封面） ========== -->
+            <div class="spread active" data-spread="0">
+                <div class="page-left book-back">
+                    <!-- 書背/封底裝飾 -->
+                </div>
+                <div class="page-right cover-page">
+                    <div class="page-inner">
+                        <div class="cover-content">
+                            <div class="cover-badge">2026</div>
+                            <h1 class="cover-title">
+                                <span class="title-jp">北海道</span>
+                                <span class="title-main">冬日之旅</span>
+                            </h1>
+                            <p class="cover-date">01.16 - 01.20</p>
+                            <p class="cover-subtitle">函館・登別・札幌・小樽</p>
+                            <div class="cover-decoration">❄ 5天4夜 ❄</div>
+                            <a href="https://www.google.com/maps/dir/函館機場/函館山/登別マリンパークニクス/札幌/小樽運河/五稜郭タワー/函館空港"
+                                target="_blank" class="full-route-btn">🗺️ 查看完整 5 日路線</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 1 -->
-            <div class="page" data-page="1">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">DAY 1</span>
-                        <div class="day-title">
-                            <h2>1/16 (週五)</h2>
-                            <p>抵達函館・極速傳說・百萬夜景</p>
+            <!-- ========== Spread 1: 翻開第一頁（封面內頁 + 行前準備） ========== -->
+            <div class="spread" data-spread="1">
+                <div class="page-left title-page">
+                    <div class="page-inner">
+                        <div class="title-page-content">
+                            <p class="title-page-text">❄ 北海道冬日之旅 ❄</p>
+                            <p class="title-page-date">2026.01.16 - 01.20</p>
                         </div>
                     </div>
+                </div>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">✅</span>
+                            <div class="day-title">
+                                <h2>行前準備</h2>
+                                <p>證件・金錢・穿著・重要時間</p>
+                            </div>
+                        </div>
 
-                    <div class="map-link-row">
-                        <a href="https://www.google.com/maps/dir/函館機場/北海道函館站前柔婕閣酒店/函館山ロープウェイ山麓駅/金森赤レンガ倉庫/ラッキーピエロ+ベイエリア本店"
-                            target="_blank" class="map-link-btn-small">🗺️ 查看今日路線</a>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-tag hotel">
-                            <div>🏨 北海道函館站前柔婕閣酒店</div>
-                            <div class="hotel-address">〒040-0063 北海道函館市若松町12番8號</div>
-                        </div>
-                        <div class="info-tag night">🌙 金森倉庫夜景</div>
-                    </div>
-
-                    <div class="schedule">
-                        <div class="schedule-item">
-                            <span class="time">17:00</span>
-                            <div class="content">
-                                <strong>✈️ 抵達函館機場</strong>
-                                <p>JX860 航班抵達</p>
+                        <div class="checklist-grid">
+                            <div class="checklist-box">
+                                <h4>📄 證件預約</h4>
+                                <label><input type="checkbox" id="c1"> 護照效期6個月</label>
+                                <label><input type="checkbox" id="c2"> <a
+                                        href="https://www.vjw.digital.go.jp/main/#/vjwplo001" target="_blank">Visit
+                                        Japan Web</a></label>
+                                <label><input type="checkbox" id="c3"> 機票確認</label>
+                                <label><input type="checkbox" id="c4"> 飯店預訂</label>
+                                <label><input type="checkbox" id="c5"> JR Pass兌換券</label>
+                                <label><input type="checkbox" id="c6"> 螃蟹訂位</label>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">18:30</span>
-                            <div class="content">
-                                <strong>🚌 帝產巴士 → 函館車站</strong>
-                                <p>約25分 ¥600</p>
+                            <div class="checklist-box">
+                                <h4>💴 金錢</h4>
+                                <label><input type="checkbox" id="c7"> 日幣 5-8萬</label>
+                                <label><input type="checkbox" id="c8"> 信用卡開通</label>
+                                <label><input type="checkbox" id="c9"> IC卡加值</label>
                             </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">19:45</span>
-                            <div class="content">
-                                <strong>🚡 函館山纜車</strong>
-                                <p>來回 ¥1,800</p>
-                                <span class="hours">⏰ 10:00-21:00｜末班上山 20:50</span>
-                                <div class="spot-links">
-                                    <a href="https://334.co.jp/" target="_blank" class="spot-link-btn official">🌐
-                                        官網</a>
-                                    <a href="https://maps.app.goo.gl/YMhdV8DjGzfDEiMo7" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
+                            <div class="checklist-box">
+                                <h4>🧥 冬季穿著</h4>
+                                <label><input type="checkbox" id="c10"> 羽絨外套</label>
+                                <label><input type="checkbox" id="c11"> 防水雪靴</label>
+                                <label><input type="checkbox" id="c12"> 暖暖包</label>
+                                <label><input type="checkbox" id="c13"> 毛帽手套圍巾</label>
                             </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">20:00</span>
-                            <div class="content">
-                                <strong>✨ 函館山百萬夜景</strong>
-                                <p>雙C海灣雪景 <span class="tag">必看</span></p>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/hakodate-night-1.jpg" alt="函館山夜景">
-                                    <img class="photo" src="images/hakodate-night-2.jpg" alt="函館山夜景">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">21:00</span>
-                            <div class="content">
-                                <strong>🏛️ 金森紅磚倉庫</strong>
-                                <div class="spot-links">
-                                    <a href="https://hakodate-kanemori.com/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.app.goo.gl/oTaA8GTcZwK4iKaVA" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/kanemori-1.jpg" alt="金森倉庫">
-                                    <img class="photo" src="images/kanemori-2.jpg" alt="金森倉庫">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">21:20</span>
-                            <div class="content">
-                                <strong>🍔 幸運小丑漢堡</strong>
-                                <p>中華雞腿堡、起司薯條 <span class="tag food">必吃</span></p>
-                                <span class="hours">⏰ 營業至 23:00</span>
-                                <div class="spot-links">
-                                    <a href="https://luckypierrot.jp/" target="_blank" class="spot-link-btn official">🌐
-                                        官網</a>
-                                    <a href="https://maps.google.com/maps?q=ラッキーピエロ+ベイエリア本店" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/lucky-pierrot-shop.jpg" alt="幸運小丑店面">
-                                    <img class="photo" src="images/lucky-pierrot-food.jpg" alt="幸運小丑漢堡">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="night-info">
-                        <h3>🌙 函館之夜</h3>
-                        <div class="night-spots">
-                            <div class="spot">
-                                <strong>札幌藥妝 函館站前店</strong>
-                                <p>📍 車站正對面 HakoVifa｜⏰ ~21:00</p>
-                            </div>
-                            <div class="spot">
-                                <strong>金森紅磚倉庫</strong>
-                                <p>📍 商店~19:00｜拍夜景最佳</p>
+                            <div class="checklist-box warning">
+                                <h4>⚡ 重要時間</h4>
+                                <label><input type="checkbox" id="c14"> 纜車末班20:50</label>
+                                <label><input type="checkbox" id="c15"> 五稜郭18:00關</label>
+                                <label><input type="checkbox" id="c16"> 企鵝遊行14:15</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 2 -->
-            <div class="page" data-page="2">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">DAY 2</span>
-                        <div class="day-title">
-                            <h2>1/17 (週六)</h2>
-                            <p>朝市・JR換票・登別企鵝・札幌</p>
+            <!-- ========== Spread 2: Day 1 ========== -->
+            <div class="spread" data-spread="2">
+                <div class="page-left">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 1</span>
+                            <div class="day-title">
+                                <h2>1/16 (週五)</h2>
+                                <p>抵達函館・極速傳說・百萬夜景</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="map-link-row">
-                        <a href="https://www.google.com/maps/dir/函館朝市/函館駅/登別マリンパークニクス/札幌駅" target="_blank"
-                            class="map-link-btn-small">🗺️ 查看今日路線</a>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-tag hotel">
-                            <div>🏨 THE KNOT SAPPORO</div>
-                            <div class="hotel-address">〒060-0063 北海道札幌市中央區南3條西3-16-2</div>
+                        <div class="map-link-row">
+                            <a href="https://www.google.com/maps/dir/函館機場/北海道函館站前柔婕閣酒店/函館山ロープウェイ山麓駅/金森赤レンガ倉庫/ラッキーピエロ+ベイエリア本店"
+                                target="_blank" class="map-link-btn-small">🗺️ 查看今日路線</a>
                         </div>
-                        <div class="info-tag night">🌙 狸小路商店街</div>
-                    </div>
 
-                    <div class="schedule">
-                        <div class="schedule-item highlight">
-                            <span class="time">08:00</span>
-                            <div class="content">
-                                <strong>🦑 函館朝市</strong>
-                                <p>海鮮丼、釣活烏賊 <span class="tag food">必吃</span></p>
-                                <span class="hours">⏰ 05:00-14:00</span>
-                                <div class="spot-links">
-                                    <a href="https://hakodate-asaichi.com/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.app.goo.gl/wjEJywDL8PjAtP85A" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/asaichi-1.jpg" alt="函館朝市">
-                                    <img class="photo" src="images/asaichi-2.jpg" alt="函館朝市">
+                        <div class="info-row">
+                            <div class="info-tag hotel">
+                                <div>🏨 北海道函館站前柔婕閣酒店</div>
+                                <div class="hotel-address">〒040-0063 北海道函館市若松町12番8號</div>
+                            </div>
+                            <div class="info-tag night">🌙 金森倉庫夜景</div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <span class="time">17:00</span>
+                                <div class="content">
+                                    <strong>✈️ 抵達函館機場</strong>
+                                    <p>JX860 航班抵達</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="schedule-item important">
-                            <span class="time">10:00</span>
-                            <div class="content">
-                                <strong>🎫 兌換 JR Pass + 劃位</strong>
-                                <p class="warning">⚠️ 劃好三段指定席！</p>
+                            <div class="schedule-item">
+                                <span class="time">18:30</span>
+                                <div class="content">
+                                    <strong>🚌 帝產巴士 → 函館車站</strong>
+                                    <p>約25分 ¥600</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">10:40</span>
-                            <div class="content">
-                                <strong>🚄 特急北斗9號 → 登別</strong>
+                            <div class="schedule-item highlight">
+                                <span class="time">19:45</span>
+                                <div class="content">
+                                    <strong>🚡 函館山纜車</strong>
+                                    <p>來回 ¥1,800</p>
+                                    <span class="hours">⏰ 10:00-21:00｜末班上山 20:50</span>
+                                    <div class="spot-links">
+                                        <a href="https://334.co.jp/" target="_blank" class="spot-link-btn official">🌐
+                                            官網</a>
+                                        <a href="https://maps.app.goo.gl/YMhdV8DjGzfDEiMo7" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">13:30</span>
-                            <div class="content">
-                                <strong>🐧 登別尼克斯海洋公園</strong>
-                                <span class="hours">⏰ 09:00-17:00｜企鵝遊行 14:15</span>
-                                <div class="spot-links">
-                                    <a href="https://www.nixe.co.jp/" target="_blank" class="spot-link-btn official">🌐
-                                        官網</a>
-                                    <a href="https://maps.google.com/maps?q=登別マリンパークニクス" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
+                            <div class="schedule-item highlight">
+                                <span class="time">20:00</span>
+                                <div class="content">
+                                    <strong>✨ 函館山百萬夜景</strong>
+                                    <p>雙C海灣雪景 <span class="tag">必看</span></p>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/hakodate-night-1.jpg" alt="函館山夜景">
+                                        <img class="photo" src="images/hakodate-night-2.jpg" alt="函館山夜景">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">14:15</span>
-                            <div class="content">
-                                <strong>🐧 企鵝遊行</strong>
-                                <p>下午場 <span class="tag">必看</span></p>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/penguin-1.jpg" alt="企鵝遊行">
-                                    <img class="photo" src="images/penguin-2.jpg" alt="企鵝遊行">
+                    </div>
+                </div>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 1</span>
+                            <div class="day-title">
+                                <h2>續・函館之夜</h2>
+                            </div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <span class="time">21:00</span>
+                                <div class="content">
+                                    <strong>🏛️ 金森紅磚倉庫</strong>
+                                    <div class="spot-links">
+                                        <a href="https://hakodate-kanemori.com/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.app.goo.gl/oTaA8GTcZwK4iKaVA" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/kanemori-1.jpg" alt="金森倉庫">
+                                        <img class="photo" src="images/kanemori-2.jpg" alt="金森倉庫">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">21:20</span>
+                                <div class="content">
+                                    <strong>🍔 幸運小丑漢堡</strong>
+                                    <p>中華雞腿堡、起司薯條 <span class="tag food">必吃</span></p>
+                                    <span class="hours">⏰ 營業至 23:00</span>
+                                    <div class="spot-links">
+                                        <a href="https://luckypierrot.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=ラッキーピエロ+ベイエリア本店" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/lucky-pierrot-shop.jpg" alt="幸運小丑店面">
+                                        <img class="photo" src="images/lucky-pierrot-food.jpg" alt="幸運小丑漢堡">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="schedule-item">
-                            <span class="time">16:34</span>
-                            <div class="content">
-                                <strong>🚄 特急北斗15號 → 札幌</strong>
-                            </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">19:00</span>
-                            <div class="content">
-                                <strong>🍛 札幌湯咖哩</strong>
-                                <p>Suage+、奧芝商店 <span class="tag food">必吃</span></p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="night-info">
-                        <h3>🌙 札幌之夜</h3>
-                        <div class="night-spots">
-                            <div class="spot">
-                                <strong>唐吉訶德 狸小路店</strong>
-                                <p>📍 狸小路3-4丁目｜⏰ 24H營業</p>
-                            </div>
-                            <div class="spot">
-                                <strong>札幌藥妝 狸小路店</strong>
-                                <p>📍 狸小路5丁目 3層樓｜⏰ ~22:00</p>
-                            </div>
-                            <div class="spot">
-                                <strong>JR Tower T38 展望室</strong>
-                                <p>📍 札幌站｜⏰ ~22:00｜看夜景</p>
+                        <div class="night-info">
+                            <h3>🌙 函館之夜</h3>
+                            <div class="night-spots">
+                                <div class="spot">
+                                    <strong>札幌藥妝 函館站前店</strong>
+                                    <p>📍 車站正對面 HakoVifa｜⏰ ~21:00</p>
+                                </div>
+                                <div class="spot">
+                                    <strong>金森紅磚倉庫</strong>
+                                    <p>📍 商店~19:00｜拍夜景最佳</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 3 -->
-            <div class="page" data-page="3">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">DAY 3</span>
-                        <div class="day-title">
-                            <h2>1/18 (週日)</h2>
-                            <p>神宮・白色戀人・小樽・螃蟹</p>
+            <!-- ========== Spread 3: Day 2 ========== -->
+            <div class="spread" data-spread="3">
+                <div class="page-left">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 2</span>
+                            <div class="day-title">
+                                <h2>1/17 (週六)</h2>
+                                <p>朝市・JR換票・登別企鵝・札幌</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="map-link-row">
-                        <a href="https://www.google.com/maps/dir/北海道神宮/白い恋人パーク/小樽運河/小樽オルゴール堂/札幌駅" target="_blank"
-                            class="map-link-btn-small">🗺️ 查看今日路線</a>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-tag hotel">
-                            <div>🏨 THE KNOT SAPPORO</div>
-                            <div class="hotel-address">〒060-0063 北海道札幌市中央區南3條西3-16-2</div>
+                        <div class="map-link-row">
+                            <a href="https://www.google.com/maps/dir/函館朝市/函館駅/登別マリンパークニクス/札幌駅" target="_blank"
+                                class="map-link-btn-small">🗺️ 查看今日路線</a>
                         </div>
-                        <div class="info-tag night">🌙 狸小路、薄野</div>
-                    </div>
 
-                    <div class="schedule">
-                        <div class="schedule-item highlight">
-                            <span class="time">08:00</span>
-                            <div class="content">
-                                <strong>⛩️ 北海道神宮</strong>
-                                <p>圓山公園站 <span class="tag">必看</span></p>
-                                <span class="hours">⏰ 冬季 06:00-17:00</span>
-                                <div class="spot-links">
-                                    <a href="https://www.hokkaidojingu.or.jp/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.google.com/maps?q=北海道神宮" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
+                        <div class="info-row">
+                            <div class="info-tag hotel">
+                                <div>🏨 THE KNOT SAPPORO</div>
+                                <div class="hotel-address">〒060-0063 北海道札幌市中央區南3條西3-16-2</div>
+                            </div>
+                            <div class="info-tag night">🌙 狸小路商店街</div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item highlight">
+                                <span class="time">08:00</span>
+                                <div class="content">
+                                    <strong>🦑 函館朝市</strong>
+                                    <p>海鮮丼、釣活烏賊 <span class="tag food">必吃</span></p>
+                                    <span class="hours">⏰ 05:00-14:00</span>
+                                    <div class="spot-links">
+                                        <a href="https://hakodate-asaichi.com/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.app.goo.gl/wjEJywDL8PjAtP85A" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/asaichi-1.jpg" alt="函館朝市">
+                                        <img class="photo" src="images/asaichi-2.jpg" alt="函館朝市">
+                                    </div>
                                 </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/jingu-1.jpg" alt="北海道神宮">
-                                    <img class="photo" src="images/jingu-2.jpg" alt="北海道神宮">
+                            </div>
+                            <div class="schedule-item important">
+                                <span class="time">10:00</span>
+                                <div class="content">
+                                    <strong>🎫 兌換 JR Pass + 劃位</strong>
+                                    <p class="warning">⚠️ 劃好三段指定席！</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">10:40</span>
+                                <div class="content">
+                                    <strong>🚄 特急北斗9號 → 登別</strong>
                                 </div>
                             </div>
                         </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">09:40</span>
-                            <div class="content">
-                                <strong>🍪 白色戀人公園</strong>
-                                <p>宮之澤站 <span class="tag">必看</span></p>
-                                <span class="hours">⏰ 10:00-17:00｜最後入館 16:00</span>
-                                <div class="spot-links">
-                                    <a href="https://www.shiroikoibitopark.jp/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.google.com/maps?q=白い恋人パーク" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
+                    </div>
+                </div>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 2</span>
+                            <div class="day-title">
+                                <h2>續・登別企鵝</h2>
+                            </div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item highlight">
+                                <span class="time">13:30</span>
+                                <div class="content">
+                                    <strong>🐧 登別尼克斯海洋公園</strong>
+                                    <span class="hours">⏰ 09:00-17:00｜企鵝遊行 14:15</span>
+                                    <div class="spot-links">
+                                        <a href="https://www.nixe.co.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=登別マリンパークニクス" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
                                 </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/shiroi-1.jpg" alt="白色戀人公園">
-                                    <img class="photo" src="images/shiroi-2.jpg" alt="白色戀人公園">
+                            </div>
+                            <div class="schedule-item highlight">
+                                <span class="time">14:15</span>
+                                <div class="content">
+                                    <strong>🐧 企鵝遊行</strong>
+                                    <p>下午場 <span class="tag">必看</span></p>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/penguin-1.jpg" alt="企鵝遊行">
+                                        <img class="photo" src="images/penguin-2.jpg" alt="企鵝遊行">
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">16:34</span>
+                                <div class="content">
+                                    <strong>🚄 特急北斗15號 → 札幌</strong>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">19:00</span>
+                                <div class="content">
+                                    <strong>🍛 札幌湯咖哩</strong>
+                                    <p>Suage+、奧芝商店 <span class="tag food">必吃</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="night-info">
+                            <h3>🌙 札幌之夜</h3>
+                            <div class="night-spots">
+                                <div class="spot">
+                                    <strong>唐吉訶德 狸小路店</strong>
+                                    <p>📍 狸小路3-4丁目｜⏰ 24H營業</p>
+                                </div>
+                                <div class="spot">
+                                    <strong>札幌藥妝 狸小路店</strong>
+                                    <p>📍 狸小路5丁目 3層樓｜⏰ ~22:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== Spread 4: Day 3 ========== -->
+            <div class="spread" data-spread="4">
+                <div class="page-left">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 3</span>
+                            <div class="day-title">
+                                <h2>1/18 (週日)</h2>
+                                <p>神宮・白色戀人・小樽・螃蟹</p>
+                            </div>
+                        </div>
+
+                        <div class="map-link-row">
+                            <a href="https://www.google.com/maps/dir/北海道神宮/白い恋人パーク/小樽運河/小樽オルゴール堂/札幌駅" target="_blank"
+                                class="map-link-btn-small">🗺️ 查看今日路線</a>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-tag hotel">
+                                <div>🏨 THE KNOT SAPPORO</div>
+                            </div>
+                            <div class="info-tag night">🌙 狸小路、薄野</div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item highlight">
+                                <span class="time">08:00</span>
+                                <div class="content">
+                                    <strong>⛩️ 北海道神宮</strong>
+                                    <p>圓山公園站 <span class="tag">必看</span></p>
+                                    <span class="hours">⏰ 冬季 06:00-17:00</span>
+                                    <div class="spot-links">
+                                        <a href="https://www.hokkaidojingu.or.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=北海道神宮" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/jingu-1.jpg" alt="北海道神宮">
+                                        <img class="photo" src="images/jingu-2.jpg" alt="北海道神宮">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-item highlight">
+                                <span class="time">09:40</span>
+                                <div class="content">
+                                    <strong>🍪 白色戀人公園</strong>
+                                    <p>宮之澤站 <span class="tag">必看</span></p>
+                                    <span class="hours">⏰ 10:00-17:00｜最後入館 16:00</span>
+                                    <div class="spot-links">
+                                        <a href="https://www.shiroikoibitopark.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=白い恋人パーク" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/shiroi-1.jpg" alt="白色戀人公園">
+                                        <img class="photo" src="images/shiroi-2.jpg" alt="白色戀人公園">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 3</span>
+                            <div class="day-title">
+                                <h2>續・小樽運河</h2>
                             </div>
                         </div>
 
                         <div class="transport-box">
-                            <h4>🚃 白色戀人公園→小樽（二選一）</h4>
+                            <h4>🚃 白色戀人公園→小樽</h4>
                             <div class="transport-route">
                                 <div class="route-option">
                                     <div class="route-title">方案一（較快）</div>
                                     <ol class="route-steps">
                                         <li>步行至地鐵「宮之澤站」（7分）</li>
-                                        <li>搭東西線往新札幌→「琴似站」下車（6分）</li>
-                                        <li>步行至 JR 琴似站（800m，約10分）</li>
+                                        <li>搭東西線→「琴似站」下車（6分）</li>
+                                        <li>步行至 JR 琴似站（10分）</li>
                                         <li>搭 JR 快速→「JR 小樽站」（25分）</li>
                                     </ol>
                                 </div>
                                 <div class="route-option">
                                     <div class="route-title">方案二（較簡單）</div>
                                     <ol class="route-steps">
-                                        <li>步行至地鐵「宮之澤站」（7分）</li>
-                                        <li>搭東西線→「大通站」轉南北線（15分）</li>
-                                        <li>南北線→「札幌站」下車（2分）</li>
-                                        <li>步行至 JR 札幌站（8分）</li>
-                                        <li>搭 JR 快速 Airport→「JR 小樽站」（35分）</li>
+                                        <li>搭東西線→「大通站」轉南北線</li>
+                                        <li>南北線→「札幌站」下車</li>
+                                        <li>搭 JR 快速→「JR 小樽站」</li>
                                     </ol>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="schedule-item highlight">
-                            <span class="time">14:00</span>
-                            <div class="content">
-                                <strong>🏛️ 小樽運河 & 堺町通</strong>
-                                <p>北一硝子、六花亭 <span class="tag">必看</span></p>
-                                <span class="hours">⏰ 運河24H｜點燈至22:30</span>
-                                <div class="spot-links">
-                                    <a href="https://otaru.gr.jp/" target="_blank" class="spot-link-btn official">🌐
-                                        官網</a>
-                                    <a href="https://maps.app.goo.gl/iYCNYKLWddxwwqn18" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
+                        <div class="schedule">
+                            <div class="schedule-item highlight">
+                                <span class="time">14:00</span>
+                                <div class="content">
+                                    <strong>🏛️ 小樽運河 & 堺町通</strong>
+                                    <p>北一硝子、六花亭 <span class="tag">必看</span></p>
+                                    <span class="hours">⏰ 運河24H｜點燈至22:30</span>
+                                    <div class="spot-links">
+                                        <a href="https://otaru.gr.jp/" target="_blank" class="spot-link-btn official">🌐
+                                            官網</a>
+                                        <a href="https://maps.app.goo.gl/iYCNYKLWddxwwqn18" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/otaru-1.jpg" alt="小樽運河">
+                                        <img class="photo" src="images/otaru-2.jpg" alt="小樽運河">
+                                    </div>
                                 </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/otaru-1.jpg" alt="小樽運河">
-                                    <img class="photo" src="images/otaru-2.jpg" alt="小樽運河">
-                                    <img class="photo" src="images/otaru-3.jpg" alt="小樽運河">
+                            </div>
+                            <div class="schedule-item highlight">
+                                <span class="time">16:30</span>
+                                <div class="content">
+                                    <strong>🌃 運河藍色時刻</strong>
+                                    <p>Blue Hour 點燈 <span class="tag">必看</span></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">16:30</span>
-                            <div class="content">
-                                <strong>🌃 運河藍色時刻</strong>
-                                <p>Blue Hour 點燈 <span class="tag">必看</span></p>
-                            </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">19:00</span>
-                            <div class="content">
-                                <strong>🦀 三大蟹吃到飽</strong>
-                                <p>難陀、蝦蟹合戰 <span class="tag food">必吃</span></p>
-                                <p class="warning">⚠️ 提前一個月訂位！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="night-info">
-                        <h3>🌙 札幌之夜</h3>
-                        <div class="night-spots">
-                            <div class="spot">
-                                <strong>狸小路商店街</strong>
-                                <p>📍 唐吉訶德24H｜札幌藥妝~22:00</p>
-                            </div>
-                            <div class="spot">
-                                <strong>Ain's & Tulpe</strong>
-                                <p>📍 Le Trois B1-2F｜專櫃化妝品</p>
-                            </div>
-                            <div class="spot">
-                                <strong>夜間聖代</strong>
-                                <p>🍨 Parfait, Coffee, Liquor, Sato</p>
+                            <div class="schedule-item highlight">
+                                <span class="time">19:00</span>
+                                <div class="content">
+                                    <strong>🦀 三大蟹吃到飽</strong>
+                                    <p>難陀、蝦蟹合戰 <span class="tag food">必吃</span></p>
+                                    <p class="warning">⚠️ 提前一個月訂位！</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 4 -->
-            <div class="page" data-page="4">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">DAY 4</span>
-                        <div class="day-title">
-                            <h2>1/19 (週一)</h2>
-                            <p>北大晨光・五稜郭星之夢</p>
+            <!-- ========== Spread 5: Day 4 ========== -->
+            <div class="spread" data-spread="5">
+                <div class="page-left">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 4</span>
+                            <div class="day-title">
+                                <h2>1/19 (週一)</h2>
+                                <p>北大晨光・五稜郭星之夢</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="map-link-row">
-                        <a href="https://www.google.com/maps/dir/北海道大学/二条市場/札幌駅/五稜郭タワー" target="_blank"
-                            class="map-link-btn-small">🗺️ 查看今日路線</a>
-                    </div>
+                        <div class="map-link-row">
+                            <a href="https://www.google.com/maps/dir/北海道大学/二条市場/札幌駅/五稜郭タワー" target="_blank"
+                                class="map-link-btn-small">🗺️ 查看今日路線</a>
+                        </div>
 
-                    <div class="info-row">
-                        <div class="info-tag hotel">
-                            <div>🏨 北海道函館站前柔婕閣酒店</div>
-                            <div class="hotel-address">〒040-0063 北海道函館市若松町12番8號</div>
+                        <div class="info-row">
+                            <div class="info-tag hotel">
+                                <div>🏨 北海道函館站前柔婕閣酒店</div>
+                            </div>
+                            <div class="info-tag night">🌙 大門橫丁</div>
                         </div>
-                        <div class="info-tag night">🌙 大門橫丁</div>
-                    </div>
 
-                    <div class="schedule">
-                        <div class="schedule-item">
-                            <span class="time">07:30</span>
-                            <div class="content">
-                                <strong>🎓 北海道大學</strong>
-                                <p>克拉克博士像、古河講堂</p>
-                                <div class="spot-links">
-                                    <a href="https://www.hokudai.ac.jp/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.google.com/maps?q=北海道大学" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/hokudai-1.jpg" alt="北海道大學">
-                                    <img class="photo" src="images/hokudai-2.jpg" alt="北海道大學">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">09:00</span>
-                            <div class="content">
-                                <strong>🍈 二條市場</strong>
-                                <p>哈密瓜、干貝 <span class="tag food">必吃</span></p>
-                                <div class="spot-links">
-                                    <a href="https://www.nijouichiba.com/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.google.com/maps?q=二条市場" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <span class="time">07:30</span>
+                                <div class="content">
+                                    <strong>🎓 北海道大學</strong>
+                                    <p>克拉克博士像、古河講堂</p>
+                                    <div class="spot-links">
+                                        <a href="https://www.hokudai.ac.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=北海道大学" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/hokudai-1.jpg" alt="北海道大學">
+                                        <img class="photo" src="images/hokudai-2.jpg" alt="北海道大學">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">12:14</span>
-                            <div class="content">
-                                <strong>🚄 特急北斗12號 → 函館</strong>
-                            </div>
-                        </div>
-                        <div class="schedule-item important">
-                            <span class="time">16:03</span>
-                            <div class="content">
-                                <strong>⚡ 抵達函館・趕五稜郭</strong>
-                                <p class="warning">⚠️ 冬季18:00關門！搭計程車！</p>
-                            </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">17:00</span>
-                            <div class="content">
-                                <strong>⭐ 五稜郭「星之夢」點燈</strong>
-                                <p>巨大白色五角星 <span class="tag">必看</span></p>
-                                <span class="hours">⏰ 09:00-18:00（冬季）</span>
-                                <div class="spot-links">
-                                    <a href="https://www.goryokaku-tower.co.jp/" target="_blank"
-                                        class="spot-link-btn official">🌐 官網</a>
-                                    <a href="https://maps.google.com/maps?q=五稜郭タワー" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/goryokaku-1.jpg" alt="五稜郭塔">
-                                    <img class="photo" src="images/goryokaku-2.jpg" alt="五稜郭塔">
+                            <div class="schedule-item">
+                                <span class="time">09:00</span>
+                                <div class="content">
+                                    <strong>🍈 二條市場</strong>
+                                    <p>哈密瓜、干貝 <span class="tag food">必吃</span></p>
+                                    <div class="spot-links">
+                                        <a href="https://www.nijouichiba.com/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=二条市場" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">18:15</span>
-                            <div class="content">
-                                <strong>🍜 晚餐選擇</strong>
-                                <p>幸運小丑（天使主題店）或味彩拉麵</p>
+                            <div class="schedule-item">
+                                <span class="time">12:14</span>
+                                <div class="content">
+                                    <strong>🚄 特急北斗12號 → 函館</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 4</span>
+                            <div class="day-title">
+                                <h2>續・五稜郭</h2>
+                            </div>
+                        </div>
 
-                    <div class="night-info">
-                        <h3>🌙 函館之夜</h3>
-                        <div class="night-spots">
-                            <div class="spot">
-                                <strong>大門橫丁</strong>
-                                <p>📍 屋台村｜宵夜喝酒最佳</p>
+                        <div class="schedule">
+                            <div class="schedule-item important">
+                                <span class="time">16:03</span>
+                                <div class="content">
+                                    <strong>⚡ 抵達函館・趕五稜郭</strong>
+                                    <p class="warning">⚠️ 冬季18:00關門！搭計程車！</p>
+                                </div>
                             </div>
-                            <div class="spot">
-                                <strong>札幌藥妝 函館站前店</strong>
-                                <p>📍 HakoVifa內｜⏰ ~21:00</p>
+                            <div class="schedule-item highlight">
+                                <span class="time">17:00</span>
+                                <div class="content">
+                                    <strong>⭐ 五稜郭「星之夢」點燈</strong>
+                                    <p>巨大白色五角星 <span class="tag">必看</span></p>
+                                    <span class="hours">⏰ 09:00-18:00（冬季）</span>
+                                    <div class="spot-links">
+                                        <a href="https://www.goryokaku-tower.co.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 官網</a>
+                                        <a href="https://maps.google.com/maps?q=五稜郭タワー" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/goryokaku-1.jpg" alt="五稜郭塔">
+                                        <img class="photo" src="images/goryokaku-2.jpg" alt="五稜郭塔">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="spot">
-                                <strong>松本清 函館站前店</strong>
-                                <p>📍 車站旁大樓｜特定品牌折扣</p>
+                            <div class="schedule-item">
+                                <span class="time">18:15</span>
+                                <div class="content">
+                                    <strong>🍜 晚餐選擇</strong>
+                                    <p>幸運小丑（天使主題店）或味彩拉麵</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="night-info">
+                            <h3>🌙 函館之夜</h3>
+                            <div class="night-spots">
+                                <div class="spot">
+                                    <strong>大門橫丁</strong>
+                                    <p>📍 屋台村｜宵夜喝酒最佳</p>
+                                </div>
+                                <div class="spot">
+                                    <strong>札幌藥妝 函館站前店</strong>
+                                    <p>📍 HakoVifa內｜⏰ ~21:00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 5 -->
-            <div class="page" data-page="5">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">DAY 5</span>
-                        <div class="day-title">
-                            <h2>1/20 (週二)</h2>
-                            <p>八幡坂・元町散步・搭機回家</p>
-                        </div>
-                    </div>
-
-                    <div class="map-link-row">
-                        <a href="https://www.google.com/maps/dir/八幡坂/函館ハリストス正教会/函館駅/函館空港" target="_blank"
-                            class="map-link-btn-small">🗺️ 查看今日路線</a>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-tag flight">✈️ JX861 15:30 起飛</div>
-                    </div>
-
-                    <div class="schedule">
-                        <div class="schedule-item">
-                            <span class="time">07:30</span>
-                            <div class="content">
-                                <strong>🏨 退房・寄放行李</strong>
+            <!-- ========== Spread 6: Day 5 + 交通指南 ========== -->
+            <div class="spread" data-spread="6">
+                <div class="page-left">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">DAY 5</span>
+                            <div class="day-title">
+                                <h2>1/20 (週二)</h2>
+                                <p>八幡坂・元町散步・搭機回家</p>
                             </div>
                         </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">08:30</span>
-                            <div class="content">
-                                <strong>📸 八幡坂 & 元町教堂群</strong>
-                                <p>坡頂拍海景、哈利斯特斯正教會 <span class="tag">必看</span></p>
-                                <div class="spot-links">
-                                    <a href="https://maps.google.com/maps?q=八幡坂" target="_blank"
-                                        class="spot-link-btn map">📍 八幡坂</a>
-                                    <a href="https://orthodox-hakodate.jp/" target="_blank"
-                                        class="spot-link-btn official">🌐 正教會</a>
-                                    <a href="https://maps.google.com/maps?q=函館ハリストス正教会" target="_blank"
-                                        class="spot-link-btn map">📍 地圖</a>
-                                </div>
-                                <div class="photo-row">
-                                    <img class="photo" src="images/hachimanzaka-1.jpg" alt="八幡坂">
-                                    <img class="photo" src="images/motomachi-1.jpg" alt="元町教堂">
+
+                        <div class="map-link-row">
+                            <a href="https://www.google.com/maps/dir/八幡坂/函館ハリストス正教会/函館駅/函館空港" target="_blank"
+                                class="map-link-btn-small">🗺️ 查看今日路線</a>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-tag flight">✈️ JX861 15:30 起飛</div>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <span class="time">07:30</span>
+                                <div class="content">
+                                    <strong>🏨 退房・寄放行李</strong>
                                 </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">10:00</span>
-                            <div class="content">
-                                <strong>🛍️ 函館車站補貨</strong>
-                                <p>Snaffle's 起司蛋糕</p>
+                            <div class="schedule-item highlight">
+                                <span class="time">08:30</span>
+                                <div class="content">
+                                    <strong>📸 八幡坂 & 元町教堂群</strong>
+                                    <p>坡頂拍海景 <span class="tag">必看</span></p>
+                                    <div class="spot-links">
+                                        <a href="https://maps.google.com/maps?q=八幡坂" target="_blank"
+                                            class="spot-link-btn map">📍 八幡坂</a>
+                                        <a href="https://orthodox-hakodate.jp/" target="_blank"
+                                            class="spot-link-btn official">🌐 正教會</a>
+                                    </div>
+                                    <div class="photo-row">
+                                        <img class="photo" src="images/hachimanzaka-1.jpg" alt="八幡坂">
+                                        <img class="photo" src="images/motomachi-1.jpg" alt="元町教堂">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">11:00</span>
-                            <div class="content">
-                                <strong>🚕 計程車 → 機場</strong>
-                                <p>4人搭車最輕鬆（約20分）</p>
+                            <div class="schedule-item">
+                                <span class="time">10:00</span>
+                                <div class="content">
+                                    <strong>🛍️ 函館車站補貨</strong>
+                                    <p>Snaffle's 起司蛋糕</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">11:30</span>
-                            <div class="content">
-                                <strong>🍽️ 機場午餐 & 購物</strong>
-                                <p>Pollux 餐廳、六花亭、薯條三兄弟</p>
+                            <div class="schedule-item">
+                                <span class="time">11:00</span>
+                                <div class="content">
+                                    <strong>🚕 計程車 → 機場</strong>
+                                </div>
                             </div>
-                        </div>
-                        <div class="schedule-item">
-                            <span class="time">13:30</span>
-                            <div class="content">
-                                <strong>✈️ 國際線辦理登機</strong>
-                            </div>
-                        </div>
-                        <div class="schedule-item highlight">
-                            <span class="time">15:30</span>
-                            <div class="content">
-                                <strong>✈️ JX861 起飛</strong>
-                                <p>滿載而歸 🎉</p>
+                            <div class="schedule-item highlight">
+                                <span class="time">15:30</span>
+                                <div class="content">
+                                    <strong>✈️ JX861 起飛</strong>
+                                    <p>滿載而歸 🎉</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 交通指南 -->
-            <div class="page" data-page="6">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">🚃</span>
-                        <div class="day-title">
-                            <h2>交通指南</h2>
-                            <p>JR Pass・市內交通・票價</p>
-                        </div>
-                    </div>
-
-                    <div class="card-grid">
-                        <div class="card">
-                            <h3>🎫 JR Pass 5日券</h3>
-                            <ul>
-                                <li>函館→登別 約2.5hr</li>
-                                <li>登別→札幌 約1hr</li>
-                                <li>札幌→小樽 約35min</li>
-                            </ul>
-                        </div>
-                        <div class="card">
-                            <h3>🏯 函館交通</h3>
-                            <ul>
-                                <li>纜車來回 ¥1,800</li>
-                                <li>路面電車 ¥210-260</li>
-                                <li>帝產巴士（機場）¥600</li>
-                            </ul>
-                        </div>
-                        <div class="card">
-                            <h3>🏙️ 札幌交通</h3>
-                            <ul>
-                                <li>地鐵單程 ¥210-360</li>
-                                <li>建議用 IC 卡</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="route-box">
-                        <h3>📍 本次路線</h3>
-                        <div class="route-flow">
-                            <span class="stop">函館</span>→
-                            <span class="stop">登別</span>→
-                            <span class="stop">札幌</span>→
-                            <span class="stop">小樽</span>→
-                            <span class="stop">札幌</span>→
-                            <span class="stop">函館</span>
-                        </div>
-                    </div>
-
-                    <div class="transport-detail">
-                        <h3>🚃 白色戀人公園→小樽</h3>
-                        <div class="transport-options">
-                            <div class="option">
-                                <strong>方案一（推薦）</strong>
-                                <p>地鐵宮之澤→琴似站（6分）→步行800m→JR琴似→JR小樽（25分）</p>
-                            </div>
-                            <div class="option">
-                                <strong>方案二</strong>
-                                <p>地鐵宮之澤→大通→札幌站→JR快速→小樽（約55分）</p>
+                <div class="page-right">
+                    <div class="page-inner">
+                        <div class="page-header">
+                            <span class="day-badge">🚃</span>
+                            <div class="day-title">
+                                <h2>交通指南</h2>
+                                <p>JR Pass・市內交通・票價</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 行前準備 -->
-            <div class="page" data-page="7">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <span class="day-badge">✅</span>
-                        <div class="day-title">
-                            <h2>行前準備</h2>
-                            <p>證件・金錢・穿著・物品</p>
+                        <div class="card-grid">
+                            <div class="card">
+                                <h3>🎫 JR Pass 5日券</h3>
+                                <ul>
+                                    <li>函館→登別 約2.5hr</li>
+                                    <li>登別→札幌 約1hr</li>
+                                    <li>札幌→小樽 約35min</li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <h3>🏯 函館交通</h3>
+                                <ul>
+                                    <li>纜車來回 ¥1,800</li>
+                                    <li>路面電車 ¥210-260</li>
+                                    <li>帝產巴士 ¥600</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="checklist-grid">
-                        <div class="checklist-box">
-                            <h4>📄 證件預約</h4>
-                            <label><input type="checkbox" id="c1"> 護照效期6個月</label>
-                            <label><input type="checkbox" id="c2"> <a
-                                    href="https://www.vjw.digital.go.jp/main/#/vjwplo001" target="_blank">Visit Japan
-                                    Web</a></label>
-                            <label><input type="checkbox" id="c3"> 機票確認</label>
-                            <label><input type="checkbox" id="c4"> 飯店預訂</label>
-                            <label><input type="checkbox" id="c5"> JR Pass兌換券</label>
-                            <label><input type="checkbox" id="c6"> 螃蟹訂位</label>
+                        <div class="route-box">
+                            <h3>📍 本次路線</h3>
+                            <div class="route-flow">
+                                <span class="stop">函館</span>→
+                                <span class="stop">登別</span>→
+                                <span class="stop">札幌</span>→
+                                <span class="stop">小樽</span>→
+                                <span class="stop">札幌</span>→
+                                <span class="stop">函館</span>
+                            </div>
                         </div>
-                        <div class="checklist-box">
-                            <h4>💴 金錢</h4>
-                            <label><input type="checkbox" id="c7"> 日幣 5-8萬</label>
-                            <label><input type="checkbox" id="c8"> 信用卡開通</label>
-                            <label><input type="checkbox" id="c9"> IC卡加值</label>
-                        </div>
-                        <div class="checklist-box">
-                            <h4>🧥 冬季穿著</h4>
-                            <label><input type="checkbox" id="c10"> 羽絨外套</label>
-                            <label><input type="checkbox" id="c11"> 防水雪靴</label>
-                            <label><input type="checkbox" id="c12"> 暖暖包</label>
-                            <label><input type="checkbox" id="c13"> 毛帽手套圍巾</label>
-                        </div>
-                        <div class="checklist-box warning">
-                            <h4>⚡ 重要時間</h4>
-                            <label><input type="checkbox" id="c14"> 纜車末班20:50</label>
-                            <label><input type="checkbox" id="c15"> 五稜郭18:00關</label>
-                            <label><input type="checkbox" id="c16"> 企鵝遊行14:15</label>
-                        </div>
-                    </div>
 
-                    <div class="page-footer">
-                        <p class="footer-text">❄ 祝旅途愉快！2026.01.16 - 01.20 ❄</p>
-                        <button class="btn-download" id="downloadPdf">📥 下載 PDF</button>
+                        <div class="page-footer">
+                            <p class="footer-text">❄ 祝旅途愉快！2026.01.16 - 01.20 ❄</p>
+                            <button class="btn-download" id="downloadPdf">📥 下載 PDF</button>
+                        </div>
                     </div>
                 </div>
             </div>

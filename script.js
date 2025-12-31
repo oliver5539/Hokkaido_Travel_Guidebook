@@ -1,5 +1,5 @@
 /* ===================================
-   北海道旅遊小書 - 翻頁式 JavaScript
+   北海道旅遊小書 - 雙頁攤開式 JavaScript
    =================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initChecklist();
     initPdfDownload();
 
-    // 3秒後隱藏翻頁提示
+    // 5秒後隱藏翻頁提示
     setTimeout(() => {
         const hint = document.getElementById('flipHint');
         if (hint) hint.style.opacity = '0';
@@ -15,64 +15,65 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * 翻頁功能
+ * 雙頁攤開式翻頁功能
  */
 function initFlipbook() {
-    const pages = document.querySelectorAll('.page');
+    const spreads = document.querySelectorAll('.spread');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const pageIndicator = document.getElementById('pageIndicator');
+    const book = document.getElementById('book');
 
-    let currentPage = 0;
-    const totalPages = pages.length;
+    let currentSpread = 0;
+    const totalSpreads = spreads.length;
 
-    // 更新頁面顯示
-    function updatePage() {
-        pages.forEach((page, index) => {
-            page.classList.toggle('active', index === currentPage);
+    // 更新顯示
+    function updateSpread() {
+        spreads.forEach((spread, index) => {
+            spread.classList.toggle('active', index === currentSpread);
         });
 
         // 更新導航按鈕
-        prevBtn.disabled = currentPage === 0;
-        nextBtn.disabled = currentPage === totalPages - 1;
+        prevBtn.disabled = currentSpread === 0;
+        nextBtn.disabled = currentSpread === totalSpreads - 1;
 
         // 更新頁碼
-        pageIndicator.textContent = `${currentPage + 1} / ${totalPages}`;
-
-        // 滾動到頁面頂部
-        window.scrollTo(0, 0);
+        const pageNames = ['封面', '行前準備', 'Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'];
+        pageIndicator.textContent = pageNames[currentSpread] || `${currentSpread + 1}`;
     }
 
-    // 上一頁
-    prevBtn.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            updatePage();
+    // 下一個 spread
+    function nextSpread() {
+        if (currentSpread < totalSpreads - 1) {
+            currentSpread++;
+            updateSpread();
         }
-    });
+    }
 
-    // 下一頁
-    nextBtn.addEventListener('click', () => {
-        if (currentPage < totalPages - 1) {
-            currentPage++;
-            updatePage();
+    // 上一個 spread
+    function prevSpread() {
+        if (currentSpread > 0) {
+            currentSpread--;
+            updateSpread();
         }
-    });
+    }
+
+    // 按鈕事件
+    prevBtn.addEventListener('click', prevSpread);
+    nextBtn.addEventListener('click', nextSpread);
 
     // 鍵盤導航
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && currentPage > 0) {
-            currentPage--;
-            updatePage();
-        } else if (e.key === 'ArrowRight' && currentPage < totalPages - 1) {
-            currentPage++;
-            updatePage();
+        if (e.key === 'ArrowLeft') {
+            prevSpread();
+        } else if (e.key === 'ArrowRight') {
+            nextSpread();
         }
     });
 
-    // 點擊書頁左右邊緣翻頁
-    document.getElementById('book').addEventListener('click', (e) => {
-        // 避免點擊 checkbox、label、button、連結時觸發翻頁
+    // 點擊翻頁
+    book.addEventListener('click', (e) => {
+        // 避免點擊互動元素時觸發翻頁
         if (e.target.closest('.checklist-box') ||
             e.target.closest('button') ||
             e.target.closest('label') ||
@@ -81,52 +82,48 @@ function initFlipbook() {
             return;
         }
 
-        const bookRect = e.currentTarget.getBoundingClientRect();
+        const bookRect = book.getBoundingClientRect();
         const clickX = e.clientX - bookRect.left;
         const bookWidth = bookRect.width;
 
-        // 點擊左側 20% 區域：上一頁
-        if (clickX < bookWidth * 0.2 && currentPage > 0) {
-            currentPage--;
-            updatePage();
+        // 點擊左側 25% 區域：上一頁
+        if (clickX < bookWidth * 0.25) {
+            prevSpread();
         }
-        // 點擊右側 20% 區域：下一頁
-        else if (clickX > bookWidth * 0.8 && currentPage < totalPages - 1) {
-            currentPage++;
-            updatePage();
+        // 點擊右側 25% 區域：下一頁
+        else if (clickX > bookWidth * 0.75) {
+            nextSpread();
         }
     });
 
-    // 觸控滑動
+    // 觸控滑動（手機版）
     let touchStartX = 0;
     let touchEndX = 0;
 
-    document.getElementById('book').addEventListener('touchstart', (e) => {
+    book.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
-    });
+    }, { passive: true });
 
-    document.getElementById('book').addEventListener('touchend', (e) => {
+    book.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
-    });
+    }, { passive: true });
 
     function handleSwipe() {
         const swipeThreshold = 50;
         const diff = touchStartX - touchEndX;
 
-        if (diff > swipeThreshold && currentPage < totalPages - 1) {
+        if (diff > swipeThreshold) {
             // 左滑 -> 下一頁
-            currentPage++;
-            updatePage();
-        } else if (diff < -swipeThreshold && currentPage > 0) {
+            nextSpread();
+        } else if (diff < -swipeThreshold) {
             // 右滑 -> 上一頁
-            currentPage--;
-            updatePage();
+            prevSpread();
         }
     }
 
     // 初始化
-    updatePage();
+    updateSpread();
 }
 
 /**
