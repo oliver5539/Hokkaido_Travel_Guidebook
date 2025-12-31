@@ -71,31 +71,6 @@ function initFlipbook() {
         }
     });
 
-    // 點擊翻頁
-    book.addEventListener('click', (e) => {
-        // 避免點擊互動元素時觸發翻頁
-        if (e.target.closest('.checklist-box') ||
-            e.target.closest('button') ||
-            e.target.closest('label') ||
-            e.target.closest('input') ||
-            e.target.closest('a')) {
-            return;
-        }
-
-        const bookRect = book.getBoundingClientRect();
-        const clickX = e.clientX - bookRect.left;
-        const bookWidth = bookRect.width;
-
-        // 點擊左側 25% 區域：上一頁
-        if (clickX < bookWidth * 0.25) {
-            prevSpread();
-        }
-        // 點擊右側 25% 區域：下一頁
-        else if (clickX > bookWidth * 0.75) {
-            nextSpread();
-        }
-    });
-
     // 觸控滑動（手機版）
     let touchStartX = 0;
     let touchEndX = 0;
