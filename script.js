@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initFlipbook();
     initChecklist();
     initPdfDownload();
+    initCCFooter();
 
     // 5秒後隱藏翻頁提示
     setTimeout(() => {
@@ -13,6 +14,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hint) hint.style.opacity = '0';
     }, 5000);
 });
+
+/**
+ * 在所有頁面（除了封面）添加版權標示
+ */
+function initCCFooter() {
+    const pages = document.querySelectorAll('.page-inner');
+    pages.forEach(page => {
+        // 跳過封面頁
+        if (page.closest('.cover-page')) return;
+
+        const ccFooter = document.createElement('div');
+        ccFooter.className = 'cc-footer';
+        ccFooter.textContent = '© 2026 pythagorayi';
+        page.appendChild(ccFooter);
+    });
+}
 
 /**
  * 雙頁攤開式翻頁功能

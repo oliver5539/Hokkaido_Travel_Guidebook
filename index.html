@@ -70,6 +70,28 @@
                             <p class="title-page-text">❄ 北海道冬日之旅 ❄</p>
                             <p class="title-page-date">2026.01.16 - 01.20</p>
                         </div>
+                        <div class="luggage-info">
+                            <div class="luggage-section">
+                                <h4>🎒 隨身行李注意事項</h4>
+                                <ul>
+                                    <li>液體限 100ml/瓶，裝入透明夾鏈袋</li>
+                                    <li>行動電源須隨身，不可托運</li>
+                                    <li>護照、機票、現金隨身攜帶</li>
+                                    <li>筆電/平板需單獨過安檢</li>
+                                    <li>禁止攜帶刀具、尖銳物品</li>
+                                </ul>
+                            </div>
+                            <div class="luggage-section">
+                                <h4>🧳 托運行李注意事項</h4>
+                                <ul>
+                                    <li>重量限制：一般 23kg/件</li>
+                                    <li>貴重物品勿放托運行李</li>
+                                    <li>易碎品加標「FRAGILE」</li>
+                                    <li>行動電源、鋰電池禁止托運</li>
+                                    <li>建議綁識別帶方便辨識</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-right">
@@ -86,7 +108,9 @@
                             <div class="checklist-box">
                                 <h4>📄 證件・金錢</h4>
                                 <label><input type="checkbox" id="c1"> 護照</label>
-                                <label><input type="checkbox" id="c2"> 簽證</label>
+                                <label><input type="checkbox" id="c2"> <a
+                                        href="https://www.vjw.digital.go.jp/main/#/vjwplo001" target="_blank">Visit
+                                        Japan Web</a></label>
                                 <label><input type="checkbox" id="c3"> 機票</label>
                                 <label><input type="checkbox" id="c4"> 日圓現金</label>
                                 <label><input type="checkbox" id="c5"> 信用卡</label>
@@ -99,6 +123,7 @@
                                 <label><input type="checkbox" id="c9"> 飯店預約紀錄</label>
                                 <label><input type="checkbox" id="c10"> JR Pass兌換券</label>
                                 <label><input type="checkbox" id="c11"> 螃蟹預約</label>
+                                <label><input type="checkbox" id="c11b"> eSIM</label>
                                 <h4 style="margin-top:8px;">👟 鞋類</h4>
                                 <label><input type="checkbox" id="c12"> 舒適好走鞋</label>
                                 <label><input type="checkbox" id="c13"> 防水止滑鞋</label>
@@ -553,8 +578,8 @@
                             <div class="schedule-item highlight">
                                 <span class="time">19:00</span>
                                 <div class="content">
-                                    <strong>🦀 三大蟹吃到飽</strong>
-                                    <p>難陀、蝦蟹合戰 <span class="tag food">必吃</span></p>
+                                    <strong>🦀 KANIZA 蟹座</strong>
+                                    <p>螃蟹料理 <span class="tag food">必吃</span></p>
                                     <p class="warning">⚠️ 提前一個月訂位！</p>
                                 </div>
                             </div>
@@ -576,7 +601,7 @@
                         </div>
 
                         <div class="map-link-row">
-                            <a href="https://www.google.com/maps/dir/北海道大学/二条市場/札幌駅/五稜郭タワー" target="_blank"
+                            <a href="https://www.google.com/maps/dir/二条市場/札幌諏訪神社/北海道大学/札幌駅/五稜郭タワー" target="_blank"
                                 class="map-link-btn-small">🗺️ 查看今日路線</a>
                         </div>
 
@@ -588,17 +613,46 @@
                         </div>
 
                         <div class="schedule">
-                            <div class="schedule-item">
+                            <div class="schedule-item highlight">
                                 <span class="time">07:30</span>
                                 <div class="content">
-                                    <strong>🎓 北海道大學</strong>
-                                    <p>克拉克博士像、古河講堂</p>
+                                    <strong>🍈 二條市場早餐</strong>
+                                    <p>烤海鮮、哈密瓜</p>
                                     <div class="spot-links">
-                                        <a href="https://www.hokudai.ac.jp/" target="_blank"
-                                            class="spot-link-btn official">🌐 官網</a>
-                                        <a href="https://maps.google.com/maps?q=北海道大学" target="_blank"
+                                        <a href="https://maps.google.com/maps?q=二条市場" target="_blank"
                                             class="spot-link-btn map">📍 地圖</a>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="schedule-item highlight">
+                                <span class="time">09:00</span>
+                                <div class="content">
+                                    <strong>⛩️ 北海道神宮 頓宮</strong>
+                                    <p>愛情成就御守 <span class="tag">必買</span></p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">09:15</span>
+                                <div class="content">
+                                    <strong>🏨 退房・行李寄放車站</strong>
+                                </div>
+                            </div>
+                            <div class="schedule-item highlight">
+                                <span class="time">09:45</span>
+                                <div class="content">
+                                    <strong>⛩️ 札幌諏訪神社</strong>
+                                    <p>蕾絲御守、花手水 <span class="tag">必看</span></p>
+                                    <div class="spot-links">
+                                        <a href="https://maps.google.com/maps?q=札幌諏訪神社" target="_blank"
+                                            class="spot-link-btn map">📍 地圖</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">10:30</span>
+                                <div class="content">
+                                    <strong>🎓 北海道大學</strong>
+                                    <p>克拉克博士像、雪景散步</p>
                                     <div class="photo-row">
                                         <img class="photo" src="images/hokudai-1.jpg" alt="北海道大學">
                                         <img class="photo" src="images/hokudai-2.jpg" alt="北海道大學">
@@ -606,16 +660,10 @@
                                 </div>
                             </div>
                             <div class="schedule-item">
-                                <span class="time">09:00</span>
+                                <span class="time">11:30</span>
                                 <div class="content">
-                                    <strong>🍈 二條市場</strong>
-                                    <p>哈密瓜、干貝 <span class="tag food">必吃</span></p>
-                                    <div class="spot-links">
-                                        <a href="https://www.nijouichiba.com/" target="_blank"
-                                            class="spot-link-btn official">🌐 官網</a>
-                                        <a href="https://maps.google.com/maps?q=二条市場" target="_blank"
-                                            class="spot-link-btn map">📍 地圖</a>
-                                    </div>
+                                    <strong>🛍️ 札幌車站補貨</strong>
+                                    <p>大丸百貨、Bic Camera、買便當</p>
                                 </div>
                             </div>
                             <div class="schedule-item">
