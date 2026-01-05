@@ -1006,6 +1006,165 @@ body {
 }
 
 /* ===================================
+   Plan A / Plan B 頁面
+   =================================== */
+.plan-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.plan-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.plan-badge.plan-b {
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.plan-title {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.plan-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.plan-text {
+    margin-bottom: 15px;
+}
+
+.plan-text p {
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.plan-list li {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.plan-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    display: inline-block;
+    counter-reset: step;
+}
+
+.plan-steps li {
+    font-size: 0.85rem;
+    padding: 10px 15px 10px 45px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 6px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.plan-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.plan-cta {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.plan-quote {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-style: italic;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.plan-footer {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+.plan-motto {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #FF9800;
+    margin-top: 10px;
+}
+
+.plan-b-list li {
+    border-left-color: #FF9800;
+}
+
+.plan-philosophy {
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* ===================================
    響應式設計 - 手機單頁顯示
    =================================== */
 @media (max-width: 768px) {
