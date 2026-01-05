@@ -55,7 +55,7 @@ function initFlipbook() {
         nextBtn.disabled = currentSpread === totalSpreads - 1;
 
         // 更新頁碼
-        const pageNames = ['封面', '出國檢查表', 'Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Plan A/B'];
+        const pageNames = ['封面', '出國檢查表', 'Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', '列車時刻', 'Plan A/B'];
         pageIndicator.textContent = pageNames[currentSpread] || `${currentSpread + 1}`;
     }
 

@@ -1165,6 +1165,87 @@ body {
 }
 
 /* ===================================
+   列車時刻表頁面
+   =================================== */
+.timetable-page {
+    background: linear-gradient(180deg, #FFFEF8 0%, #F5F0E6 100%);
+}
+
+.timetable-section {
+    margin-bottom: 12px;
+}
+
+.timetable-section.otaru {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-radius: 8px;
+}
+
+.timetable-title {
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--ice);
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.65rem;
+}
+
+.timetable th {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.timetable td {
+    padding: 4px 8px;
+    text-align: center;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.timetable tbody tr:nth-child(even) {
+    background: rgba(240, 230, 255, 0.3);
+}
+
+.timetable tbody tr.highlight {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    font-weight: 600;
+}
+
+.timetable tbody tr.highlight td {
+    color: var(--accent);
+}
+
+.timetable-note {
+    font-size: 0.65rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.rapid-info {
+    padding: 5px 0;
+}
+
+.rapid-info p {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.rapid-info strong {
+    color: #2E7D32;
+}
+
+/* ===================================
    響應式設計 - 手機單頁顯示
    =================================== */
 @media (max-width: 768px) {
