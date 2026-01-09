@@ -1417,6 +1417,135 @@ body {
     display: inline-block;
 }
 
+/* === 花費明細頁 === */
+.expense-page {
+    background: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 100%);
+}
+
+.expense-section {
+    margin-bottom: 16px;
+}
+
+.expense-title {
+    font-size: 0.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.expense-table {
+    width: 100%;
+    font-size: 0.7rem;
+    border-collapse: collapse;
+}
+
+.expense-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.expense-table .amount {
+    text-align: right;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.expense-table tfoot td {
+    border-top: 2px solid var(--primary);
+    font-weight: 700;
+}
+
+.expense-table .subtotal {
+    color: var(--primary-dark);
+}
+
+.expense-summary {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.summary-title {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.summary-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.8rem;
+}
+
+.summary-row .label {
+    color: var(--text-light);
+}
+
+.summary-row .value {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.summary-divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 10px 0;
+}
+
+.summary-row.total {
+    font-size: 1rem;
+}
+
+.summary-row.total .label {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.summary-row.total .value {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.per-person-card {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.per-person-label {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.per-person-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.per-person-note {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.expense-note {
+    font-size: 0.65rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
 /* ===================================
    列車時刻表頁面
    =================================== */
