@@ -1546,6 +1546,43 @@ body {
     font-style: italic;
 }
 
+/* 購物資訊 */
+.shopping-info {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border-left: 3px solid var(--primary);
+}
+
+.shopping-info h4 {
+    font-size: 0.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.shop-item {
+    margin-bottom: 8px;
+}
+
+.shop-item strong {
+    font-size: 0.7rem;
+    color: var(--text);
+}
+
+.shop-item p {
+    font-size: 0.6rem;
+    color: var(--text-light);
+    margin: 2px 0;
+}
+
+.transport-note {
+    font-size: 0.7rem;
+    color: #E65100;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
 /* ===================================
    列車時刻表頁面
    =================================== */
